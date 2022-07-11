@@ -6,9 +6,9 @@
   &__card {
     @include flexBox (auto, space-between, auto, false);
     @include pos-absolute (-2rem,auto,auto,auto);
-    width: 60%;
     z-index: 2;
     color: $primary-color;
+    @extend .wrapper;
 
     &__item {
       padding: 20px;

@@ -3,12 +3,13 @@
   background-image: url("https://via.placeholder.com/1920x356.png/616667");
 
   & .wrapper { 
-    @include flexBox (auto, auto, center, false); 
+    @include flexBox (auto, space-between, center, false); 
   }
 
-  &__img { margin-right: 147px; }
+  &__img { flex-basis: 16.09%; }
 
   &__text {
+    flex-basis: 61.85%;
 
     &__title {
       color: $white;

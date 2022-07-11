@@ -43,6 +43,12 @@ li {
   }
 }
 
+%footer-title {
+  color: $white;
+  text-transform: capitalize;
+  @include font (1.25rem, 400)
+}
+
 %input-element {
   width: 100%;
   padding: 16px;

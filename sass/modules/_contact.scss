@@ -26,10 +26,7 @@
         -webkit-appearance: none;
         appearance: none;
 
-        &::after {
-          @include icon ("\f0d7", 1.2rem, 400, $primary-color);
-
-        }
+        &::after { @include icon ("\f0d7", 1.2rem, 400, $primary-color); }
       }
 
       & textarea { @extend %input-element; }

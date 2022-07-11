@@ -1,0 +1,67 @@
+.footer {
+  padding: 95px 0 33px;
+  background-color: $charcoal;
+
+  &__list {
+    @include flexBox (auto, space-between, auto, false);
+
+    &__item {
+      padding-bottom: 32px;
+      flex-basis: calc(25% - 50px);
+
+      &__title { @extend %footer-title }
+
+      &__list {
+        padding-top: 17px;
+        @include flexBox (column, auto, auto, false);
+        gap: 10px;
+
+        &__item { text-transform: capitalize; }
+      }
+
+      &__social__title { 
+        padding: 28px 0 17px;
+        @extend %footer-title;
+      }
+
+      &__social {
+        @include flexBox (auto, space-between, auto, false);
+        gap: 5px;
+
+        &__list {
+          
+          &__icon {
+            text-indent: -999999px;
+
+            &::before {
+              padding:15px;
+              border-radius: 50%;
+              background-color: $dark-charcoal;
+              text-align: center;
+              text-indent: 0;
+              float: right;
+            }
+
+            &.facebook::before { @include social-icon ("\f09a", 1.1rem); }
+
+            &.twitter::before { @include social-icon ("\f099", 1.1rem); }
+  
+            &.google::before { @include social-icon ("\f2b3", 1.1rem); }
+  
+            &.instagram::before { @include social-icon ("\f16d", 1.1rem); }
+
+            &.linkedin::before { @include social-icon ("\f08c", 1.1rem) }
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    padding-top: 14px;
+    border-top: 1px solid #475653;
+    color: $white;
+
+    &--green { color: $secondary-color; }
+  }
+}
