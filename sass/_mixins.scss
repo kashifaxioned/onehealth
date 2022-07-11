@@ -56,11 +56,19 @@
   transition: transform ease-in-out .5s;
 }
 
-@mixin social-icon ($content, $icon-size) {
-  @include icon ($content, $icon-size, 400, $grey)
+@mixin social-icon ($content, $icon-size) { @include icon ($content, $icon-size, 400, $grey) }
+
+@mixin card-icon ($content) { 
+  @include icon ($content, 1.8rem, 500, $white); 
+  @include breakpoint (ipad-pro) { font-size: 1.2rem; }
 }
 
 @mixin breakpoint($device) {
+  @if($device=='large-pc'){
+    @media screen and (max-width: $large-pc) {
+      @content;
+    }
+  }
   @if($device=='pc'){
     @media screen and (max-width: $pc) {
       @content;

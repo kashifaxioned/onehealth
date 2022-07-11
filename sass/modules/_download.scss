@@ -2,18 +2,29 @@
   padding-top: 3.12rem;
   background-image: url("https://via.placeholder.com/1920x356.png/616667");
 
+  @include breakpoint (ipad-pro) { padding-bottom: 3.12rem }
+
   & .wrapper { 
     @include flexBox (auto, space-between, center, false); 
   }
 
-  &__img { flex-basis: 16.09%; }
+  &__img {
+    flex-basis: 16.09%; 
+    @include breakpoint (ipad-pro) { display: none; }
+  }
 
   &__text {
     flex-basis: 61.85%;
 
+    @include breakpoint (ipad-pro) { flex-basis: 80%; }
+    @include breakpoint (large-mobile) { flex-basis: 100%; }
+
     &__title {
       color: $white;
-      @include font (2.2rem, 400)
+      @include font (2.2rem, 400);
+      @include breakpoint (ipad-pro) { font-size: 1.5rem; }
+      @include breakpoint (large-mobile) { font-size: 1rem; }
+
     }
 
     &__list {
@@ -34,10 +45,15 @@
           line-height: 1;
           text-transform: capitalize;
 
+          @include breakpoint (ipad-pro) { font-size: 16px; }
+          @include breakpoint (large-mobile) { font-size: 12px; }
+
           &--small {
             display: block;
             @include font (12px, 400);
-          }
+            @include breakpoint (ipad-pro) { font-size: 10px; }
+            @include breakpoint (large-mobile) { font-size: 8px; }
+        }
         }
       
         &::before { 
@@ -45,12 +61,20 @@
           margin-right: 10px;
         }
 
-        &.google::before { @include icon ("\f3ab", 2rem, 400, $secondary-color); }
+        &.google::before { 
+          @include icon ("\f3ab", 2rem, 400, $secondary-color); 
+          @include breakpoint (ipad-pro) { font-size: 1.5rem; }
+          @include breakpoint (large-mobile) { font-size: 1rem; }
+        }
 
         &.apple {
           padding: 10px 15px;
 
-          &::before { @include icon ("\f179", 2.3rem, 400, $secondary-color); } 
+          &::before { 
+            @include icon ("\f179", 2.3rem, 400, $secondary-color); 
+            @include breakpoint (ipad-pro) { font-size: 1.5rem; }
+            @include breakpoint (large-mobile) { font-size: 1.3rem; }
+          } 
         }
         
         &:hover { background-color: transparent; }

@@ -3,6 +3,8 @@
   position: relative;
   background-color: $bluish-white;
 
+  @include breakpoint (ipad-pro) { padding-top: 5rem; }
+
   &__card {
     @include flexBox (auto, space-between, auto, false);
     @include pos-absolute (-2rem,auto,auto,auto);
@@ -10,11 +12,23 @@
     color: $primary-color;
     @extend .wrapper;
 
+    @include breakpoint (ipad) { 
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+    }
+
     &__item {
       padding: 20px;
       border-radius: 5px;
-      flex-basis: calc(33.33% - 83px);
+      flex-basis: calc(33.33% - 5.18rem);
       background-color: $white;
+
+      @include breakpoint (pc) { flex-basis: calc(33.33% - 2rem); }
+      @include breakpoint (ipad-pro) { 
+        padding: 10px;
+        flex-basis: calc(33.33% - 1rem); 
+      }
 
       &::before {
         width: 40px;
@@ -23,29 +37,42 @@
         margin-right: 2.12rem;
         float: left;
         text-align: center;
+
+        @include breakpoint (ipad-pro) {
+          width: 20px;
+          padding: 10px;
+          margin-right: 12px;
+        }
+
       }
 
       &.chat::before { 
         background-color: $blue;
-        @include icon ("\f086", 1.8rem, 500, $white); 
+        @include card-icon ("\f086"); 
       }
 
       &.protection::before {
         background-color: $secondary-color;
-        @include icon ("\f132", 1.8rem, 500, $white); 
+        @include card-icon ("\f132"); 
       }
 
       &.pharmacy::before {
         background-color: $pink;
-        @include icon ("\f004", 1.8rem, 500, $white); 
+        @include card-icon ("\f004"); 
       }
 
-      &__text { @include font (1.2rem, 500); }
+      &__text { 
+        @include font (1.2rem, 500); 
+      
+        @include breakpoint (ipad-pro) { font-size: 14px }
+      }
     }
   }
 
   &__content {
     @include flexBox (auto, space-between, center, false);
+
+    @include breakpoint (ipad-pro) { flex-direction: column; }
 
     &__text {
       padding-bottom: 2.68rem;

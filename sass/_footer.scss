@@ -1,13 +1,17 @@
 .footer {
-  padding: 95px 0 33px;
+  padding: 5.93rem 0 2.06rem;
   background-color: $charcoal;
 
+  @include breakpoint (large-mobile) { padding: 2rem 0; }
+
   &__list {
-    @include flexBox (auto, space-between, auto, false);
+    @include flexBox (auto, space-between, auto, true);
+
+    @include breakpoint (large-mobile) { flex-direction: column; }
 
     &__item {
-      padding-bottom: 32px;
-      flex-basis: calc(25% - 50px);
+      padding-bottom: 2rem;
+      flex-basis: calc(25% - 3.12rem);
 
       &__title { @extend %footer-title }
 

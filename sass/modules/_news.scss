@@ -7,14 +7,20 @@
   &__title { @extend %section-title; }
 
   &__card {
-    padding: 52px 0;
+    padding: 3.25rem 0 2rem;
     @include flexBox (auto, space-between, auto, false);
 
+    @include breakpoint (ipad) {
+      flex-direction: column; 
+      gap: 20px;
+    }
 
     &__item {
       border-radius: 5px;
-      flex-basis: calc(33.33% - 80px);
+      flex-basis: calc(33.33% - 5rem);
       position: relative;
+
+      @include breakpoint (pc) { flex-basis: calc(33.33% - 2rem); }
 
       &__badge {
         padding: 7px;
