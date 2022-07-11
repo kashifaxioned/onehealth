@@ -1,0 +1,73 @@
+.about {
+  padding-top: 11rem;
+  position: relative;
+  background-color: $bluish-white;
+
+  &__card {
+    @include flexBox (auto, space-between, auto, false);
+    @include pos-absolute (-2rem,auto,auto,auto);
+    width: 60%;
+    z-index: 2;
+    color: $primary-color;
+
+    &__item {
+      padding: 20px;
+      border-radius: 5px;
+      flex-basis: calc(33.33% - 83px);
+      background-color: $white;
+
+      &::before {
+        width: 40px;
+        padding: 14px;
+        border-radius: 50%;
+        margin-right: 2.12rem;
+        float: left;
+        text-align: center;
+      }
+
+      &.chat::before { 
+        background-color: $blue;
+        @include icon ("\f086", 1.8rem, 500, $white); 
+      }
+
+      &.protection::before {
+        background-color: $secondary-color;
+        @include icon ("\f132", 1.8rem, 500, $white); 
+      }
+
+      &.pharmacy::before {
+        background-color: $pink;
+        @include icon ("\f004", 1.8rem, 500, $white); 
+      }
+
+      &__text { @include font (1.2rem, 500); }
+    }
+  }
+
+  &__content {
+    @include flexBox (auto, space-between, center, false);
+
+    &__text {
+      padding-bottom: 2.68rem;
+      flex-basis: 50%;
+
+      &__title { 
+        @extend %section-title;
+        text-align: left;
+      }
+
+      &__info { 
+        margin: 24px 0;
+        @extend %section-info; 
+      }
+
+      &__cta { @include cta (13px, 23px, 13px, 23px) }
+    }
+   
+
+  &__img {
+    float: right;
+  }
+  }
+  
+} 

@@ -104,6 +104,28 @@ li {
   margin: 0 auto;
   width: 60%; }
 
+.about__content__text__title {
+  color: #375377;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2.4rem;
+  font-weight: 500; }
+  @media screen and (max-width: 768px) {
+    .about__content__text__title {
+      font-size: 2.5rem;
+      font-weight: 900; } }
+
+.about__content__text__info {
+  color: #889faf;
+  line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 400; }
+  @media screen and (max-width: 768px) {
+    .about__content__text__info {
+      padding: 1.5rem 0 3rem;
+      font-size: 1.3rem;
+      font-weight: 900; } }
+
 .header__info {
   padding: 12px 0 5px;
   border-bottom: 1px solid #aec3cc;
@@ -286,3 +308,85 @@ li {
     .banner__cta:hover {
       background-color: transparent;
       color: #3ed9a5; }
+
+.about {
+  padding-top: 11rem;
+  position: relative;
+  background-color: #f5f9f6; }
+  .about__card {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    position: absolute;
+    top: -2rem;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 60%;
+    z-index: 2;
+    color: #375377; }
+    .about__card__item {
+      padding: 20px;
+      border-radius: 5px;
+      flex-basis: calc(33.33% - 83px);
+      background-color: #fff; }
+      .about__card__item::before {
+        width: 40px;
+        padding: 14px;
+        border-radius: 50%;
+        margin-right: 2.12rem;
+        float: left;
+        text-align: center; }
+      .about__card__item.chat::before {
+        background-color: #4e59fe;
+        content: "";
+        color: #fff;
+        font-family: "FontAwesome";
+        font-size: 1.8rem;
+        font-weight: 500; }
+      .about__card__item.protection::before {
+        background-color: #3ed9a5;
+        content: "";
+        color: #fff;
+        font-family: "FontAwesome";
+        font-size: 1.8rem;
+        font-weight: 500; }
+      .about__card__item.pharmacy::before {
+        background-color: #f73c85;
+        content: "";
+        color: #fff;
+        font-family: "FontAwesome";
+        font-size: 1.8rem;
+        font-weight: 500; }
+      .about__card__item__text {
+        font-size: 1.2rem;
+        font-weight: 500; }
+  .about__content {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    .about__content__text {
+      padding-bottom: 2.68rem;
+      flex-basis: 50%; }
+      .about__content__text__title {
+        text-align: left; }
+      .about__content__text__info {
+        margin: 24px 0; }
+      .about__content__text__cta {
+        padding: 13px 23px 13px 23px;
+        border-radius: 5px;
+        border: 1px solid #3ed9a5;
+        background-color: #3ed9a5;
+        color: #fff;
+        font-size: 14px;
+        line-height: 1;
+        text-transform: capitalize; }
+        .about__content__text__cta:hover {
+          background-color: transparent;
+          color: #3ed9a5; }
+    .about__content__img {
+      float: right; }

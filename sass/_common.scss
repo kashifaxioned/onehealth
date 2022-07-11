@@ -25,14 +25,17 @@ li {
 }
 
 %section-title { 
-  @include font (3.12rem, 900); 
+  color: $primary-color;
+  text-align: center;
+  text-transform: capitalize; 
+  @include font (2.4rem, 500);
   @include breakpoint (ipad) { @include font (2.5rem, 900); }
 }
 
 %section-info {
-  padding: 2.5rem 0 5.62rem;
   color: $tertiary-color;
-  @include font (1.56rem, 400);
+  line-height: 1.6;
+  @include font (1rem, 400);
 
   @include breakpoint (ipad) { 
     padding: 1.5rem 0 3rem;
