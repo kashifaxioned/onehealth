@@ -35,14 +35,29 @@
   left: $left;
 }
 
+@mixin  cta ($top, $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+  border-radius: 5px;
+  border: 1px solid $secondary-color;
+  background-color: $secondary-color;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: capitalize;
+
+  &:hover {
+    background-color: transparent;
+    color: $secondary-color;
+  }
+}
 
 @mixin trans-grow ($scale) {
   transform: scale($scale);
   transition: transform ease-in-out .5s;
 }
 
-@mixin social-icon ($content) {
-  @include icon ($content, $icon-size, 400, #fff)
+@mixin social-icon ($content, $icon-size) {
+  @include icon ($content, $icon-size, 400, $grey)
 }
 
 @mixin breakpoint($device) {
@@ -73,6 +88,11 @@
   }
   @else if($device=='small-mobile') {
     @media screen and (max-width: $small-mobile) {
+      @content;
+    }
+  }
+  @else if($device=='min-ipad') {
+    @media screen and (min-width: $ipad) {
       @content;
     }
   }

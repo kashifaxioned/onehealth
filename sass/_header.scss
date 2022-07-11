@@ -1,0 +1,124 @@
+.header {
+
+  &__info {
+    padding: 12px 0 5px;
+    border-bottom: 1px solid $grey;
+    @include flexBox (auto, auto, center, false);
+
+    &__number {
+      padding-right: 12px;
+      border-right: 1px solid $grey;
+      @include font (15px, 500);
+
+      &::before {
+        @include icon ("\f095", 1rem, 600, $secondary-color);
+        margin-right: 10px;
+      }
+    }
+
+    &__mail {
+      padding-left: 12px;
+      @include font (15px, 400);
+      
+      &::before {
+        @include icon ("\f0e0", 14px, 600, $secondary-color);
+        margin-right: 10px;
+      }
+    }
+
+    &__social {
+      margin-left: auto;
+      @include flexBox (auto, auto, auto, false);
+
+      &__list {
+        
+        &__icon {
+          margin-right: 20px;
+          text-indent: -999999px;
+
+          &::before {
+            text-indent: 0;
+            float: right;
+          }
+
+          @include breakpoint (min-ipad) { &:hover { @include trans-grow (1.2) } }
+
+          &.facebook::before { @include social-icon ("\f09a", 1rem); }
+
+          &.twitter::before { @include social-icon ("\f099", 1rem); }
+
+          &.google::before { @include social-icon ("\f2b3", 1rem); }
+
+          &.instagram::before { @include social-icon ("\f16d", 1rem); }
+        }
+      }
+    }
+  } 
+
+  &__main {
+    padding: 1rem 0;
+    @include flexBox (auto, auto, center, false);
+    gap: 17px;
+
+    &__menu {
+      @include flexBox (auto, auto, center, false);
+      flex-basis: 89%;
+
+      &__searchbox {
+        border: 1px solid $grey;
+        border-radius: 5px;
+        flex-basis: 28%;
+        @include flexBox (auto, auto, center, false);
+
+        &__submit {
+          padding: 13px;
+          border: none;
+          border-right: 1px solid $grey;
+          background: none;
+          text-indent: -999999px;
+
+          &::before { 
+            float: right;
+            text-indent: 0;
+            @include icon ("\f002", 1rem, 400, $secondary-color);
+          }
+        }
+
+        &__input {
+          padding: 13px 10px 9px;
+          border: none;
+          line-height: 1;
+          outline: none;
+          vertical-align: middle;
+          width: fit-content;
+          @include font (1rem, 500);
+        }
+      }
+  
+      &__nav {
+        flex-basis: 56.6%;
+
+        &__list {
+          @include flexBox (auto, flex-end, center, false);
+
+          &__item {
+            margin-right: 30px;
+            text-transform: capitalize;
+            
+            // @include font (1rem, 600);
+
+            &.active { color: $secondary-color; }
+
+            @include breakpoint (min-ipad) { &:hover { color: $secondary-color; } }
+          }
+        }
+      }
+
+      &__login {
+        margin-left: auto;
+        @include cta (11px, 24px, 10px, 24px)
+      }
+      &__open, &__close { display: none; }
+    }
+  }
+}

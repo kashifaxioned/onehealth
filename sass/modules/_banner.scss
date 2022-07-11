@@ -1,0 +1,25 @@
+.banner {
+  padding: 12.12rem 0 12.25rem;
+  background-image: url("https://via.placeholder.com/1920x514.png/616667");
+  color: #fff;
+  text-align: center;
+
+  & .wrapper { width: 100%; }
+
+  &__info {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @include font (1.2rem, 500)
+  }
+
+  &__title {
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    @include font (3rem, 500)
+  }
+
+  &__cta {
+    margin-top: 27px;
+    @include cta (13px, 23px, 13px, 23px)
+  }
+}
