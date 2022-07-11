@@ -1,0 +1,43 @@
+* { box-sizing: border-box; }
+
+body {
+  box-sizing: border-box;
+  color: #fff;
+  font-family: 'Fredoka', sans-serif;
+}
+
+a { 
+  display: inline-block;
+  color: inherit;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.container { position: relative; }
+
+.wrapper {
+  margin: 0 auto;
+  width: 60%; 
+}
+
+%section-title { 
+  @include font (3.12rem, 900); 
+  @include breakpoint (ipad) { @include font (2.5rem, 900); }
+}
+
+%section-info {
+  padding: 2.5rem 0 5.62rem;
+  color: $tertiary-color;
+  @include font (1.56rem, 400);
+
+  @include breakpoint (ipad) { 
+    padding: 1.5rem 0 3rem;
+    @include font (1.3rem, 900); 
+  
+  }
+
+}
