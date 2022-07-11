@@ -1,5 +1,5 @@
 .doctor {
-  padding: 4.81rem 0 5.31rem;
+  padding: 4.81rem 0 6.12rem;
 
   &__title { @extend %section-title; }
 
@@ -12,7 +12,7 @@
       flex-basis: calc(33.33% - 90px);
       box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
-      &__img { border-radius: 5px; }
+      &__img img { border-radius: 5px 5px 0 0; }
 
       &__name {
         padding: 21px 23px 0;
