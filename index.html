@@ -168,21 +168,25 @@
       <!-- contact section start -->
       <section class="contact">
         <div class="wrapper">
-          <h3 class="contact__tile">make an appointment</h3>
+          <h3 class="contact__title">make an appointment</h3>
           <form action="" class="contact__form">
-            <div class="contact__form__group"><input type="text" name="name" placeholder="Full name"></div>
-            <div class="contact__form__group"><input type="email" name="email" placeholder="Email address.."></div>
-            <div class="contact__form__group"><input type="date" name="date"></div>
-            <div class="contact__form__group">
-              <select>
-                <option value="genral health">genral health</option>
-                <option value="dental">dental</option>
-                <option value="cardiology">cardiology</option>
-              </select>
+            <div class="contact__form__row">
+              <div class="contact__form__group"><input type="text" name="name" placeholder="Full name"></div>
+              <div class="contact__form__group"><input type="email" name="email" placeholder="Email address.."></div>
+            </div>
+            <div class="contact__form__row">
+              <div class="contact__form__group"><input type="date" name="date"></div>
+              <div class="contact__form__group">
+                <select>
+                  <option value="genral health">genral health</option>
+                  <option value="dental">dental</option>
+                  <option value="cardiology">cardiology</option>
+                </select>
+              </div>
             </div>
             <div class="contact__form__group"><input type="number" name="number" placeholder="Number.."></div>
             <div class="contact__form__group">
-              <textarea name="message" id="" cols="30" rows="10"></textarea>
+              <textarea name="message" id="" cols="30" rows="10" placeholder="Enter message.."></textarea>
             </div>
             <div class="contact__form__control"><button type="submit">submit request</button></div>
           </form>
