@@ -104,14 +104,14 @@ li {
   margin: 0 auto;
   width: 60%; }
 
-.about__content__text__title {
+.about__content__text__title, .doctor__title {
   color: #375377;
   text-align: center;
   text-transform: capitalize;
   font-size: 2.4rem;
   font-weight: 500; }
   @media screen and (max-width: 768px) {
-    .about__content__text__title {
+    .about__content__text__title, .doctor__title {
       font-size: 2.5rem;
       font-weight: 900; } }
 
@@ -388,5 +388,66 @@ li {
         .about__content__text__cta:hover {
           background-color: transparent;
           color: #3ed9a5; }
-    .about__content__img {
-      float: right; }
+
+.doctor {
+  padding: 4.81rem 0 5.31rem; }
+  .doctor__card {
+    padding: 59px 1.9% 42px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch; }
+    .doctor__card__item {
+      border-radius: 5px;
+      flex-basis: calc(33.33% - 90px);
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
+      .doctor__card__item__img {
+        border-radius: 5px; }
+      .doctor__card__item__name {
+        padding: 21px 23px 0;
+        color: #375377;
+        text-transform: capitalize;
+        font-size: 1.3rem;
+        font-weight: 500; }
+      .doctor__card__item__speciality {
+        padding: 0 23px 21px;
+        text-transform: capitalize;
+        font-size: 14px;
+        font-weight: 400; }
+  .doctor__control {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .doctor__control__item__name {
+      padding: 10px 15px 0;
+      display: block;
+      background-color: #3ed9a5;
+      cursor: pointer;
+      text-indent: -999999px; }
+      .doctor__control__item__name::before {
+        text-indent: 0;
+        float: right;
+        vertical-align: middle; }
+      .doctor__control__item__name--left {
+        border-radius: 15px 0 0 15px; }
+        .doctor__control__item__name--left::before {
+          content: "";
+          color: #fff;
+          font-family: "FontAwesome";
+          font-size: 15px;
+          font-weight: 400; }
+      .doctor__control__item__name--right {
+        border-radius: 0 15px 15px 0; }
+        .doctor__control__item__name--right::before {
+          content: "";
+          color: #fff;
+          font-family: "FontAwesome";
+          font-size: 15px;
+          font-weight: 400; }
+      @media screen and (min-width: 768px) {
+        .doctor__control__item__name:hover {
+          transform: scale(1.1);
+          transition: transform ease-in-out .5s; } }

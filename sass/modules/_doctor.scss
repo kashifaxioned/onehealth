@@ -1,0 +1,64 @@
+.doctor {
+  padding: 4.81rem 0 5.31rem;
+
+  &__title { @extend %section-title; }
+
+  &__card {
+    padding: 59px 1.9% 42px;
+    @include flexBox (auto, space-between, auto, false);
+
+    &__item {
+      border-radius: 5px;
+      flex-basis: calc(33.33% - 90px);
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+      &__img { border-radius: 5px; }
+
+      &__name {
+        padding: 21px 23px 0;
+        color: $primary-color;
+        text-transform: capitalize;
+        @include font (1.3rem, 500);
+      }
+
+      &__speciality {
+        padding: 0 23px 21px;
+        text-transform: capitalize;
+        @include font (14px, 400);
+      }
+    }
+  }
+
+  &__control {
+    @include flexBox (auto, center, center, false);
+
+    &__item {
+      
+      &__name {
+        padding: 10px 15px 0;
+        display: block;
+        background-color: $secondary-color;
+        cursor: pointer;
+        text-indent: -999999px;
+
+        &::before {
+          text-indent: 0;
+          float: right;
+          vertical-align: middle;
+        }
+
+        &--left {
+          border-radius: 15px 0 0 15px;
+          &::before { @include icon ("\f177", 15px, 400, $white); }
+        } 
+
+        &--right {
+          border-radius: 0 15px 15px 0;
+          &::before { @include icon ("\f178", 15px, 400, $white); }
+        }
+
+        @include breakpoint (min-ipad) { &:hover { @include trans-grow (1.1) } }
+      }
+    }
+  }
+}
