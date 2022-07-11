@@ -588,3 +588,66 @@ li {
       .contact__form__control button:hover {
         background-color: transparent;
         color: #3ed9a5; }
+
+.download {
+  padding-top: 3.12rem;
+  background-image: url("https://via.placeholder.com/1920x356.png/616667"); }
+  .download .wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; }
+  .download__img {
+    margin-right: 147px; }
+  .download__text__title {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 400; }
+  .download__text__list {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 13px; }
+    .download__text__list__item {
+      padding: 0 12px;
+      border: 1px solid #000;
+      border-radius: 10px;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center; }
+      .download__text__list__item__text {
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1;
+        text-transform: capitalize; }
+        .download__text__list__item__text--small {
+          display: block;
+          font-size: 12px;
+          font-weight: 400; }
+      .download__text__list__item::before {
+        vertical-align: middle;
+        margin-right: 10px; }
+      .download__text__list__item.google::before {
+        content: "";
+        color: #3ed9a5;
+        font-family: "FontAwesome";
+        font-size: 2rem;
+        font-weight: 400; }
+      .download__text__list__item.apple {
+        padding: 10px 15px; }
+        .download__text__list__item.apple::before {
+          content: "";
+          color: #3ed9a5;
+          font-family: "FontAwesome";
+          font-size: 2.3rem;
+          font-weight: 400; }
+      .download__text__list__item:hover {
+        background-color: transparent; }
