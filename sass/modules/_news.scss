@@ -1,0 +1,85 @@
+.news {
+  padding: 4.81rem 0;
+  background-color: $bluish-white;
+
+  & .wrapper { @include flexBox (column, center, center, false); }
+
+  &__title { @extend %section-title; }
+
+  &__card {
+    padding: 3.25rem 0 2rem;
+    @include flexBox (auto, space-between, auto, false);
+
+    @include breakpoint (ipad) {
+      flex-direction: column; 
+      gap: 20px;
+    }
+
+    &__item {
+      border-radius: 5px;
+      flex-basis: calc(33.33% - 5rem);
+      position: relative;
+
+      @include breakpoint (pc) { flex-basis: calc(33.33% - 2rem); }
+
+      &__badge {
+        padding: 7px;
+        border-radius: 8px;
+        background-color: $blue;
+        color: $white;
+        line-height: 1;
+        @include font (11px, 400);  
+        @include pos-absolute (15px, auto, auto, 20px);
+      }
+
+      &__img img { border-radius: 5px 5px 0 0; }
+      
+      &__text {
+        background-color: $white;
+        padding: 20px;
+
+        &__title {
+          padding-bottom: 16px;
+          color: $primary-color;
+          @include font (1.2rem, 500);
+        }
+        
+        &__author {
+          margin-right: 12px;
+          color: $tertiary-color;
+          text-transform: capitalize;
+          @include font (12px, 400);
+
+          &::before {
+            content: " ";
+            padding: 1px 10px;
+            border-radius: 50%;
+            margin-right: 6px;
+            background-color: $primary-color;
+          } 
+        }
+
+        &__time {
+          color: $tertiary-color;
+          @include font (12px, 400);
+
+          &::before {
+            content: " ";
+            height: 10px;
+            padding: 5px;
+            border-radius: 50%;
+            margin-right: 6px;
+            background-color: $primary-color;
+            font-size: 0;
+            vertical-align: middle;
+          } 
+        }
+      }
+    }
+  }
+
+  &__cta {
+    @include cta (12px, 24px, 12px, 24px);
+    margin: 0 auto;
+  }
+}

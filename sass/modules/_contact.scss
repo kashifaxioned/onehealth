@@ -1,0 +1,49 @@
+.contact {
+  padding: 4.81rem 0 3.68rem;
+  
+  & .wrapper { 
+    width: 37.88%; 
+    @include breakpoint (pc) { width: 60%; } 
+    @include breakpoint (ipad) { width: 80%; } 
+  }
+
+  &__title { @extend %section-title; }
+
+  &__form {
+    padding: 52px 0 23px;
+    @include flexBox (column, auto, auto, false);
+    gap: 15px;
+
+    &__row {
+      @include flexBox (auto, auto, auto, false); 
+      gap: 1.93rem;
+
+      @include breakpoint (large-mobile) {
+        flex-direction: column;
+        gap: 15px;
+      } 
+
+    }
+
+    &__group {
+      flex-basis: 50%;
+
+      & input { @extend %input-element; }
+
+      & select { 
+        @extend %input-element;
+        text-transform: capitalize;
+        -webkit-appearance: none;
+        appearance: none;
+
+        &::after { @include icon ("\f0d7", 1.2rem, 400, $primary-color); }
+      }
+
+      & textarea { @extend %input-element; }
+
+    }
+
+    &__control button { @include cta (13px, 23px, 13px, 23px) }
+
+  }
+}
