@@ -104,14 +104,14 @@ li {
   margin: 0 auto;
   width: 60%; }
 
-.about__content__text__title, .doctor__title, .news__title {
+.about__content__text__title, .doctor__title, .news__title, .contact__title {
   color: #375377;
   text-align: center;
   text-transform: capitalize;
   font-size: 2.4rem;
   font-weight: 500; }
   @media screen and (max-width: 768px) {
-    .about__content__text__title, .doctor__title, .news__title {
+    .about__content__text__title, .doctor__title, .news__title, .contact__title {
       font-size: 2.5rem;
       font-weight: 900; } }
 
@@ -125,6 +125,17 @@ li {
       padding: 1.5rem 0 3rem;
       font-size: 1.3rem;
       font-weight: 900; } }
+
+.contact__form__group input, .contact__form__group select, .contact__form__group textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #e1e5e3;
+  border-radius: 5px;
+  background-color: transparent;
+  outline: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500; }
 
 .header__info {
   padding: 12px 0 5px;
@@ -269,7 +280,7 @@ li {
       border: 1px solid #3ed9a5;
       background-color: #3ed9a5;
       color: #fff;
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1;
       text-transform: capitalize; }
       .header__main__menu__login:hover {
@@ -302,7 +313,7 @@ li {
     border: 1px solid #3ed9a5;
     background-color: #3ed9a5;
     color: #fff;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1;
     text-transform: capitalize; }
     .banner__cta:hover {
@@ -382,7 +393,7 @@ li {
         border: 1px solid #3ed9a5;
         background-color: #3ed9a5;
         color: #fff;
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1;
         text-transform: capitalize; }
         .about__content__text__cta:hover {
@@ -526,10 +537,54 @@ li {
     border: 1px solid #3ed9a5;
     background-color: #3ed9a5;
     color: #fff;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1;
     text-transform: capitalize;
     margin: 0 auto; }
     .news__cta:hover {
       background-color: transparent;
       color: #3ed9a5; }
+
+.contact {
+  padding: 77px 0 82px; }
+  .contact .wrapper {
+    width: 37.88%; }
+  .contact__form {
+    padding: 52px 0 23px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 15px; }
+    .contact__form__row {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 1.93rem; }
+    .contact__form__group {
+      flex-basis: 50%; }
+      .contact__form__group select {
+        text-transform: capitalize;
+        -webkit-appearance: none;
+        appearance: none; }
+        .contact__form__group select::after {
+          content: "";
+          color: #375377;
+          font-family: "FontAwesome";
+          font-size: 1.2rem;
+          font-weight: 400; }
+    .contact__form__control button {
+      padding: 13px 23px 13px 23px;
+      border-radius: 5px;
+      border: 1px solid #3ed9a5;
+      background-color: #3ed9a5;
+      color: #fff;
+      font-size: 15px;
+      line-height: 1;
+      text-transform: capitalize; }
+      .contact__form__control button:hover {
+        background-color: transparent;
+        color: #3ed9a5; }

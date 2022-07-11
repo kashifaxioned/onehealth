@@ -40,7 +40,16 @@ li {
   @include breakpoint (ipad) { 
     padding: 1.5rem 0 3rem;
     @include font (1.3rem, 900); 
-  
   }
+}
 
+%input-element {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #e1e5e3;
+  border-radius: 5px;
+  background-color: transparent;
+  outline: none;
+  font-family: inherit;
+  @include font (16px, 500);
 }

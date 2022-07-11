@@ -1,0 +1,6 @@
+.download {
+  padding-top: 50px;
+  background-image: url("https://via.placeholder.com/1920x514.png/616667");
+
+  & .wrapper { @include flexBox (auto, auto, center, false); }
+}

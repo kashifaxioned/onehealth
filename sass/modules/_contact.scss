@@ -1,0 +1,42 @@
+.contact {
+  padding: 77px 0 82px;
+  
+  & .wrapper { width: 37.88%; }
+
+  &__title { @extend %section-title; }
+
+  &__form {
+    padding: 52px 0 23px;
+    @include flexBox (column, auto, auto, false);
+    gap: 15px;
+
+    &__row {
+      @include flexBox (auto, auto, auto, false); 
+      gap: 1.93rem;
+    }
+
+    &__group {
+      flex-basis: 50%;
+
+      & input { @extend %input-element; }
+
+      & select { 
+        @extend %input-element;
+        text-transform: capitalize;
+        -webkit-appearance: none;
+        appearance: none;
+
+        &::after {
+          @include icon ("\f0d7", 1.2rem, 400, $primary-color);
+
+        }
+      }
+
+      & textarea { @extend %input-element; }
+
+    }
+
+    &__control button { @include cta (13px, 23px, 13px, 23px) }
+
+  }
+}
